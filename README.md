@@ -2,7 +2,7 @@
 # 说明文档
 ****************************************************
 
-Master：[![Build
+[![Build
        Status](https://travis-ci.org/anyangxaut/CashRegister.svg?branch=master)](https://travis-ci.org/anyangxaut/CashRegister)
 
 ## 文件说明
