@@ -11,9 +11,6 @@ import utils.FileUtils;
 
 import java.util.HashMap;
 
-/**
- * Created by anyang on 2016/7/18.
- */
 public class CashRegister {
 
     public static final String PROJECTPATH = System.getProperty("user.dir");
@@ -112,5 +109,4 @@ public class CashRegister {
         receiptBuilder.append("******************************\n");
         System.out.println(receiptBuilder.toString());
     }
-
 }
