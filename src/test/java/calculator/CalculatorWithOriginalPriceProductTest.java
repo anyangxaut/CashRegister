@@ -9,9 +9,6 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
-/**
- * Created by carrie on 2016/7/20.
- */
 public class CalculatorWithOriginalPriceProductTest {
 
     CalculatorWithOriginalPriceProduct calculatorWithOriginalPriceProduct;
