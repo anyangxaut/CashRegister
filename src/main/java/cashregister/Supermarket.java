@@ -5,9 +5,6 @@ import utils.FileUtils;
 
 import java.util.HashMap;
 
-/**
- * Created by anyang on 2016/7/18.
- */
 public class Supermarket {
 
     public HashMap<String, Product> supermarketProducts;
