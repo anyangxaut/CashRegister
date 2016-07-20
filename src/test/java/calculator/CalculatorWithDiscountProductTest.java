@@ -47,6 +47,4 @@ public class CalculatorWithDiscountProductTest {
         when(product.getPrice()).thenReturn(price);
         return product;
     }
-
-
 }

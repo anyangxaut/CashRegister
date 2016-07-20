@@ -43,4 +43,15 @@ public class Product {
     public double getPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return
+                "barcode=" + barcode +
+                ", name=" + name +
+                ", unit=" + unit +
+                ", category=" + category +
+                ", subCategory=" + subCategory +
+                ", price=" + price;
+    }
 }
