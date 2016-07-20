@@ -34,6 +34,8 @@
 	
 	包src\main\java下存放项目执行入口程序CashRegisterMain.java。
 
+	包src\test\java下存放项目测试文件。
+
 ## 用法说明
 
     设置data文件夹下discount，shoppingCart和supermarket三个文件，分别模拟打折活动，用户购物车和超市，然后执行即可在控制台得到输出小票信息。若店员需要设置优惠活动，则可以通过在CashRegisterMain类的main方法内加入下面的代码即可，其中fileParse方法的参数filePath为折扣信息文件路径，"discount"表示将文件以折扣文件类型进行解析。
