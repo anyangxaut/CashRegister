@@ -9,7 +9,9 @@ import static org.junit.Assert.assertEquals;
  * Created by carrie on 2016/7/20.
  */
 public class ProductTest {
+
     Product product;
+
     @Before
     public void setUp() throws Exception {
         String barcode = "ITEM000000";
@@ -18,7 +20,7 @@ public class ProductTest {
         String category = "食品";
         String subCategory = "碳酸饮料";
         double price = 3.00;
-        //ITEM000000,可口可乐,瓶,食品,碳酸饮料,3.00
+
         product = new Product(barcode,name, unit, category, subCategory, price);
     }
 
