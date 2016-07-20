@@ -5,9 +5,6 @@ import model.Product;
 import java.io.*;
 import java.util.HashMap;
 
-/**
- * Created by anyang on 2016/7/18.
- */
 public class FileUtils {
 
     public static HashMap fileParse(String filePath, String filetype) {
@@ -76,7 +73,6 @@ public class FileUtils {
 
         while((lineData = bufferedReader.readLine()) != null) {
             String[] dataArray = lineData.split(",");
-            // 存储商品信息
             supermarketProducts.put(dataArray[0], new Product(dataArray[0], dataArray[1], dataArray[2], dataArray[3], dataArray[4],
                     Double.parseDouble(dataArray[5])));
         }
