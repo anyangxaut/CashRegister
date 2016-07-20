@@ -28,7 +28,7 @@ public class ReceiptPrinterTest {
     }
 
     @Test
-    public void testPrintBuyTwoGetOneProduct() throws Exception {
+    public void testPrintBuyTwoGetOneProductWhenProductNumberIsNotZero() throws Exception {
         HashMap<Product, Integer> buyTwoGetOneProductListWithNumber =  new HashMap<Product, Integer>();
         buyTwoGetOneProductListWithNumber.put(createProduct("可口可乐", "瓶", 3.00 ), 1);
         buyTwoGetOneProductListWithNumber.put(createProduct("面包", "个", 4.50 ), 3);
@@ -37,6 +37,15 @@ public class ReceiptPrinterTest {
 
         assertEquals("******************************\n买二赠一商品：\n名称：可口可乐，数量：1瓶\n名称：面包，数量：3个\n",
                 result);
+    }
+
+    @Test
+    public void testPrintBuyTwoGetOneProductWhenProductNumberIsZero() throws Exception {
+        HashMap<Product, Integer> buyTwoGetOneProductListWithNumber =  new HashMap<Product, Integer>();
+
+        String result = receiptPrinter.printBuyTwoGetOneProduct(buyTwoGetOneProductListWithNumber);
+
+        assertEquals("", result);
     }
 
     @Test
@@ -61,7 +70,6 @@ public class ReceiptPrinterTest {
 
         assertEquals("名称：可口可乐，数量：1瓶，单价：3.00(元)，小计：3.00(元)\n名称：面包，数量：3个，单价：4.50(元)，" +
                 "小计：9.00(元)\n", result);
-
     }
 
     @Test
@@ -77,12 +85,21 @@ public class ReceiptPrinterTest {
     }
 
     @Test
-    public void testPrintSavePrice() throws Exception {
+    public void testPrintSavePriceWhenSavePriceIsNotZero() throws Exception {
         double savePrice = 1.00;
 
         String result = receiptPrinter.printSavePrice(savePrice);
 
         assertEquals("节省：1.00(元)\n", result);
+    }
+
+    @Test
+    public void testPrintSavePriceWhenSavePriceIsZero() throws Exception {
+        double savePrice = 0.0;
+
+        String result = receiptPrinter.printSavePrice(savePrice);
+
+        assertEquals("", result);
     }
 
     @Test
@@ -92,7 +109,6 @@ public class ReceiptPrinterTest {
         String result = receiptPrinter.printSumPrice(sumPrice);
 
         assertEquals("总计：12.34(元)\n", result);
-
     }
 
     private Product createProduct(String name, String unit, double price) {
