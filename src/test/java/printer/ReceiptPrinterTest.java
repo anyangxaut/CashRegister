@@ -35,7 +35,8 @@ public class ReceiptPrinterTest {
 
         String result = receiptPrinter.printBuyTwoGetOneProduct(buyTwoGetOneProductListWithNumber);
 
-        assertEquals("******************************\n买二赠一商品：\n名称：面包，数量：3个\n名称：可口可乐，数量：1瓶\n", result);
+        assertEquals("******************************\n买二赠一商品：\n名称：可口可乐，数量：1瓶\n名称：面包，数量：3个\n",
+                result);
     }
 
     @Test
@@ -46,7 +47,8 @@ public class ReceiptPrinterTest {
 
         String result = receiptPrinter.printMultipleProductWithOriginalPrice(originalPriceProductListWithNumber);
 
-        assertEquals("名称：面包，数量：3个，单价：4.50(元)，小计：13.50(元)\n名称：可口可乐，数量：1瓶，单价：3.00(元)，小计：3.00(元)\n",result);
+        assertEquals("名称：可口可乐，数量：1瓶，单价：3.00(元)，小计：3.00(元)\n名称：面包，数量：3个，单价：4.50(元)，" +
+                "小计：13.50(元)\n",result);
     }
 
     @Test
@@ -57,7 +59,8 @@ public class ReceiptPrinterTest {
 
         String result = receiptPrinter.printMultipleProductWithBuyTwoGetOne(buyTwoGetOneProductListWithNumber);
 
-        assertEquals("名称：面包，数量：3个，单价：4.50(元)，小计：9.00(元)\n名称：可口可乐，数量：1瓶，单价：3.00(元)，小计：3.00(元)\n", result);
+        assertEquals("名称：可口可乐，数量：1瓶，单价：3.00(元)，小计：3.00(元)\n名称：面包，数量：3个，单价：4.50(元)，" +
+                "小计：9.00(元)\n", result);
 
     }
 
@@ -69,7 +72,8 @@ public class ReceiptPrinterTest {
 
         String result = receiptPrinter.printMultipleProductWithDiscount(discountProductListWithNumber);
 
-        assertEquals("名称：面包，数量：3个，单价：4.50(元)，小计：12.83(元), 节省：0.68(元)\n名称：可口可乐，数量：4瓶，单价：3.00(元)，小计：11.40(元), 节省：0.60(元)\n", result);
+        assertEquals("名称：可口可乐，数量：4瓶，单价：3.00(元)，小计：11.40(元), 节省：0.60(元)\n名称：面包，数量：3个，" +
+                "单价：4.50(元)，小计：12.83(元), 节省：0.68(元)\n", result);
     }
 
     @Test
