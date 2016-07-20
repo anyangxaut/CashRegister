@@ -9,9 +9,6 @@ import  static org.mockito.Mockito.*;
 
 import java.util.HashMap;
 
-/**
- * Created by carrie on 2016/7/20.
- */
 public class CalculatorWithDiscountProductTest {
 
     CalculatorWithDiscountProduct calculatorWithDiscountProduct;
@@ -41,7 +38,6 @@ public class CalculatorWithDiscountProductTest {
         double price = calculatorWithDiscountProduct.calculate(discountProductListWithNumber);
 
         assertEquals(62.7, price, 0.01);
-
     }
 
     private Product createProduct(double price) {
