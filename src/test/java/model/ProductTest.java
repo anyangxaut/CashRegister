@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by carrie on 2016/7/20.
- */
 public class ProductTest {
 
     Product product;
@@ -26,50 +23,64 @@ public class ProductTest {
 
     @Test
     public void testGetBarcode() throws Exception {
+        String expectedStr = "ITEM000000";
+
         String barcode = product.getBarcode();
 
-        assertEquals("ITEM000000", barcode);
+        assertEquals(expectedStr, barcode);
     }
 
     @Test
     public void testGetName() throws Exception {
+        String expectedStr = "可口可乐";
+
         String name = product.getName();
 
-        assertEquals("可口可乐", name);
+        assertEquals(expectedStr, name);
     }
 
     @Test
     public void testGetUnit() throws Exception {
+        String expectedStr = "瓶";
+
         String unit = product.getUnit();
 
-        assertEquals("瓶", unit);
+        assertEquals(expectedStr, unit);
     }
 
     @Test
     public void testGetCategory() throws Exception {
+        String expectedStr = "食品";
+
         String category = product.getCategory();
 
-        assertEquals("食品", category);
+        assertEquals(expectedStr, category);
     }
 
     @Test
     public void testGetSubCategory() throws Exception {
+        String expectedStr = "碳酸饮料";
+
         String subcategory = product.getSubCategory();
 
-        assertEquals("碳酸饮料", subcategory);
+        assertEquals(expectedStr, subcategory);
     }
 
     @Test
     public void testGetPrice() throws Exception {
+        double expectedPrice = 3.00;
+
         double price = product.getPrice();
 
-        assertEquals(3.00, price, 0.01);
+        assertEquals(expectedPrice, price, 0.01);
     }
 
     @Test
     public void testToString() throws Exception {
+        String expectedStr = "barcode:ITEM000000, name:可口可乐, unit:瓶, category:食品, subCategory:碳酸饮料, price:3.0";
+
         String result = product.toString();
 
-        assertEquals("barcode=ITEM000000, name=可口可乐, unit=瓶, category=食品, subCategory=碳酸饮料, price=3.0", result);
+        assertEquals(expectedStr, result);
     }
 }

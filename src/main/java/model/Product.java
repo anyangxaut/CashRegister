@@ -1,8 +1,5 @@
 package model;
 
-/**
- * Created by anyang on 2016/7/18.
- */
 public class Product {
     private String barcode;
     private String name;
@@ -46,7 +43,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "barcode:" + barcode + ", name:" + name + ", unit" + unit + ", category" + category
+        return "barcode:" + barcode + ", name:" + name + ", unit:" + unit + ", category:" + category
                 + ", subCategory:" + subCategory + ", price:" + price;
     }
 }
