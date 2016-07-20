@@ -9,11 +9,10 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
-/**
- * Created by carrie on 2016/7/20.
- */
 public class ReceiptPrinterTest {
+
     ReceiptPrinter receiptPrinter;
+
     @Before
     public void setUp() throws Exception {
         receiptPrinter = new ReceiptPrinter();
@@ -21,9 +20,11 @@ public class ReceiptPrinterTest {
 
     @Test
     public void testPrintTitle() throws Exception {
+        String expectedstr = "***<没钱赚商店>购物清单***\n";
+
         String title = receiptPrinter.printTitle();
 
-        assertEquals("***<没钱赚商店>购物清单***\n", title);
+        assertEquals(expectedstr, title);
     }
 
     @Test
@@ -39,7 +40,6 @@ public class ReceiptPrinterTest {
 
     @Test
     public void testPrintMultipleProductWithOriginalPrice() throws Exception {
-
         HashMap<Product, Integer> originalPriceProductListWithNumber = new HashMap<Product, Integer>();
         originalPriceProductListWithNumber.put(createProduct("可口可乐", "瓶", 3.00 ), 1);
         originalPriceProductListWithNumber.put(createProduct("面包", "个", 4.50 ), 3);
@@ -74,7 +74,6 @@ public class ReceiptPrinterTest {
 
     @Test
     public void testPrintSavePrice() throws Exception {
-//        return String.format("节省：%1.2f(元)\n", totalPrice);
         double savePrice = 1.00;
 
         String result = receiptPrinter.printSavePrice(savePrice);
