@@ -5,9 +5,6 @@ import model.Product;
 
 import java.util.HashMap;
 
-/**
- * Created by anyang on 2016/7/18.
- */
 public class ReceiptPrinter {
 
     public String printTitle() {
@@ -45,6 +42,9 @@ public class ReceiptPrinter {
     }
 
     public String printBuyTwoGetOneProduct(HashMap<Product, Integer> buyTwoGetOneProductListWithNumber) {
+        if(buyTwoGetOneProductListWithNumber.keySet().isEmpty()) {
+            return "";
+        }
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("******************************\n");
         stringBuilder.append("买二赠一商品：\n");
@@ -84,6 +84,9 @@ public class ReceiptPrinter {
     }
 
     public String printSavePrice(double totalPrice) {
+        if (totalPrice == 0.0) {
+            return "";
+        }
         return String.format("节省：%1.2f(元)\n", totalPrice);
     }
 
