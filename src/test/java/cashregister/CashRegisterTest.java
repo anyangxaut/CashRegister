@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package cashregister;
 
 import org.junit.Before;
@@ -23,13 +23,3 @@ public class CashRegisterTest {
 
     }
 }
-=======
-import static org.junit.Assert.*;
-
-/**
- * Created by anyang on 2016/7/20.
- */
-public class CashRegisterTest {
-
-}
->>>>>>> f5fc2e98582234f445e47c44a8ea2e5244b02c2d
