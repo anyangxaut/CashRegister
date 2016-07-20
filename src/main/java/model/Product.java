@@ -46,6 +46,7 @@ public class Product {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return
                 "barcode=" + barcode +
                 ", name=" + name +
@@ -53,5 +54,9 @@ public class Product {
                 ", category=" + category +
                 ", subCategory=" + subCategory +
                 ", price=" + price;
+=======
+        return "barcode:" + barcode + ", name:" + name + ", unit" + unit + ", category" + category
+                + ", subCategory:" + subCategory + ", price:" + price;
+>>>>>>> f5fc2e98582234f445e47c44a8ea2e5244b02c2d
     }
 }

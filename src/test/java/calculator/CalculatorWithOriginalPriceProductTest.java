@@ -13,7 +13,9 @@ import static org.mockito.Mockito.*;
  * Created by carrie on 2016/7/20.
  */
 public class CalculatorWithOriginalPriceProductTest {
+
     CalculatorWithOriginalPriceProduct calculatorWithOriginalPriceProduct;
+
     @Before
     public void setUp() throws Exception {
         calculatorWithOriginalPriceProduct = new CalculatorWithOriginalPriceProduct();

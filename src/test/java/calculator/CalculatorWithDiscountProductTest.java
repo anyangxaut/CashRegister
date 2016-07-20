@@ -13,7 +13,9 @@ import java.util.HashMap;
  * Created by carrie on 2016/7/20.
  */
 public class CalculatorWithDiscountProductTest {
+
     CalculatorWithDiscountProduct calculatorWithDiscountProduct;
+
     @Before
     public void setUp() throws Exception {
         calculatorWithDiscountProduct = new CalculatorWithDiscountProduct();
