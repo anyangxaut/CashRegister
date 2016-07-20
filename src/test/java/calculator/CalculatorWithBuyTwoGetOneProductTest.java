@@ -10,9 +10,6 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-/**
- * Created by anyang on 2016/7/20.
- */
 public class CalculatorWithBuyTwoGetOneProductTest {
 
     CalculatorWithBuyTwoGetOneProduct calculatorWithBuyTwoGetOneProduct;
